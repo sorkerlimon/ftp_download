@@ -3,10 +3,10 @@ from datetime import datetime
 import os
 
 def serve_login():
-    sftp_host = 'ftp03.datatree.com'
-    sftp_port = 22 
-    sftp_username = '$IMQA'
-    sftp_password = '$qamst$'
+    sftp_host = ''
+    sftp_port = 
+    sftp_username = ''
+    sftp_password = ''
 
     ssh_client = paramiko.SSHClient()
     ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -75,7 +75,7 @@ if __name__ == "__main__":
         try:
             username = input('Enter username : ').lower()
             password = input('Enter password : ').lower()
-            if username == 'iimi' and password == 'iimi':
+            if username == '' and password == '':
                 sftp_client, ssh_client = serve_login()
                 local_directory = input("Enter the local directory path where you want to save the files: ")
                 download_date = input("Enter the Date (2024-03-16): ")
